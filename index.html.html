@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anagha Prakash D. | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fc;
+            color: #1d3557;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0b4f8a;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #9ed8ff;
+        }
+
+        /* Home Section */
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(135deg, #0b4f8a, #4da8da);
+            color: white;
+        }
+
+        .home-content {
+            animation: fadeIn 1.5s ease;
+        }
+
+        .home h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .home h3 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            font-size: 17px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: white;
+            color: #0b4f8a;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* General Sections */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #0b4f8a;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* Education */
+        .education-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #0b4f8a;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 18px 28px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            color: #0b4f8a;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: #0b4f8a;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Activities */
+        .activities {
+            background-color: #e9f4fc;
+        }
+
+        .activity-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .activity {
+            background-color: white;
+            width: 280px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .activity:hover {
+            transform: translateY(-8px);
+        }
+
+        .activity h3 {
+            color: #0b4f8a;
+            margin-bottom: 10px;
+        }
+
+        /* Certificate */
+        .certificate {
+            text-align: center;
+        }
+
+        .certificate-box {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .certificate-box:hover {
+            transform: scale(1.03);
+        }
+
+        .certificate-box h3 {
+            color: #0b4f8a;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b4f8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home h1 {
+                font-size: 38px;
+            }
+
+            .home h3 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Anagha</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>Hi, I'm Anagha Prakash D.</h1>
+
+            <h3>Student & Future Tech Professional</h3>
+
+            <p>
+                Welcome to my personal portfolio.
+                I am an Integrated MCA student who is curious about
+                technology, communication and the world of AI.
+            </p>
+
+            <a href="#about" class="button">Explore My Portfolio</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Me -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            I am a friendly and curious person with an interest in
+            communication, technology and artificial intelligence.
+            I enjoy listening to music, watching movies, travelling
+            and writing.
+        </p>
+
+        <br>
+
+        <p>
+            I chose Integrated MCA because technology is growing
+            rapidly these days, and I wanted to learn more about
+            computers. As I learn more about technology, I find it
+            becoming more interesting and exciting every day.
+        </p>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-container">
+
+            <div class="card">
+                <h3>School</h3>
+                <p>
+                    Bishop Moore Higher Secondary School
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>College</h3>
+                <p>
+                    Rajagiri College of Social Sciences
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Current Course</h3>
+                <p>
+                    Integrated MCA<br>
+                    First Year
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">C Programming</div>
+
+            <div class="skill">Communication</div>
+
+            <div class="skill">Public Speaking</div>
+
+            <div class="skill">Teamwork</div>
+
+            <div class="skill">Problem Solving</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Activities -->
+    <section class="activities" id="activities">
+
+        <h2 class="section-title">Activities</h2>
+
+        <div class="activity-container">
+
+            <div class="activity">
+                <h3>Presentations</h3>
+                <p>
+                    Participated in academic presentations
+                    and developed my presentation skills.
+                </p>
+            </div>
+
+            <div class="activity">
+                <h3>Workshops</h3>
+                <p>
+                    Participated in workshops to gain
+                    new knowledge and practical experience.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certificate -->
+    <section class="certificate" id="certificate">
+
+        <h2 class="section-title">Certificate</h2>
+
+        <div class="certificate-box">
+
+            <h3>Skill Build Workshop</h3>
+
+            <p>
+                Certificate of participation in the
+                Skill Build Workshop.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Anagha Prakash D. | Personal Portfolio</p>
+
+    </footer>
+
+</body>
+</html>
